@@ -5,7 +5,7 @@ import { format, parseISO, isBefore, isToday } from "date-fns";
 
 const SHEET_ID = "1c1Hrw0slf_D-MUoCV1q5iImMp94yJCdcqXlJg58rxcs";
 const API_KEY = "AIzaSyC2yvpJhZDPEE2HsJQ3NWlB_6PTVV7EDzw";
-const RANGE = "Agendamento!A2:G";
+const RANGE = "AGENDAMENTO!A2:G";
 
 const getStatus = (dateStr) => {
   const date = parseISO(dateStr);
