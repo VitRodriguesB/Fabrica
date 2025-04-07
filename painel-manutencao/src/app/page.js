@@ -3,9 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { format, parseISO, isBefore, isToday } from "date-fns";
 
-const SHEET_ID = "SUA_PLANILHA_ID";
-const API_KEY = "SUA_API_KEY";
-const RANGE = "Agendamento!A2:D";
+const SHEET_ID = "1c1Hrw0slf_D-MUoCV1q5iImMp94yJCdcqXlJg58rxcs";
+const API_KEY = "AIzaSyC2yvpJhZDPEE2HsJQ3NWlB_6PTVV7EDzw";
+const RANGE = "Agendamento!A2:G";
 
 const getStatus = (dateStr) => {
   const date = parseISO(dateStr);
@@ -113,12 +113,12 @@ export default function PainelManutencao() {
         {filtrado.map((item, idx) => (
           <div
             key={idx}
-            className={\`p-4 border rounded \${getStatus(item.proxima) === "atrasada"
+            className={`p-4 border rounded ${getStatus(item.proxima) === "atrasada"
               ? "bg-red-50"
               : getStatus(item.proxima) === "hoje"
               ? "bg-yellow-50"
               : "bg-white"
-            }\`}
+            }`}
           >
             <h3 className="text-lg font-bold">{item.maquina}</h3>
             <div className="text-sm mt-2">Última: {format(parseISO(item.ultima), "dd/MM/yyyy")}</div>
